@@ -7,22 +7,22 @@ body {
   box-sizing: border-box;
 }
 
-/* Apply flexbox to the entire nav and the ul for a horizontal layout */
+/* NAVIGATION BAR FIX */
 nav {
   display: flex;
-  justify-content: flex-start;  
-  gap: 1rem; 
+  justify-content: center;   /* Center links horizontally */
+  align-items: center;
   padding: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav ul {
-  display: flex;              /* Makes the list horizontal */
-  list-style: none;           /* Removes bullet points */
+  display: flex;                 /* Horizontal list */
+  list-style: none;              /* Remove bullets */
   padding: 0;
   margin: 0;
-  gap: 1rem;                  /* Adds spacing between the list items */
+  gap: 2rem;                     /* Space between links */
 }
 
 nav a {
@@ -31,23 +31,29 @@ nav a {
   padding: 0.5em;
 }
 
-/* Current page link style */
+/* Current Page Highlight */
 nav a.current {
   font-weight: bold;
   border-bottom: 0.4em solid oklch(80% 3% 200);
   padding-bottom: 0.1em;
 }
 
-/* Fixing the image and text layout with flexbox */
+/* IMAGE AND TEXT LAYOUT FIX */
 section {
-  display: flex;                   /* Flexbox for side-by-side layout */
-  align-items: center;             /* Vertical centering */
-  gap: 2rem;                       /* Space between the image and text */
-  flex-wrap: wrap;                 /* Makes it responsive */
+  display: flex;
+  flex-direction: column;       /* Stack image and text vertically */
+  align-items: center;          /* Center both items */
+  text-align: center;           /* Center the text under the image */
+  gap: 1rem;
+}
+
+section p {
+  max-width: 60ch;  /* Control text width for readability */
 }
 
 img {
   max-width: 300px;
   border-radius: 8px;
-  flex-shrink: 0;                  /* Prevents the image from shrinking */
+  margin-bottom: 1rem; /* Adds space between the image and text */
 }
+
