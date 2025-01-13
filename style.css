@@ -9,3 +9,9 @@ body {
     padding: 1rem;                 /* Add padding around the edges */
     box-sizing: border-box;        /* Ensure padding is included in the width */
   }
+
+  nav ul {
+    list-style: none;   /* Removes bullet points */
+    padding: 0;         /* Removes default padding */
+    margin: 0;          /* Removes default margin */
+}
