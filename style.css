@@ -26,8 +26,7 @@ nav a {
   color: inherit;                  /* Makes links use the same text color as the parent */
   text-align: center;              /* Centers the text in its box */
   padding: 0.5em;                  /* Adds spacing inside each link box */
-  flex: 1;                         /* Makes links take equal space */
-  transition: border 0.2s ease-in-out; /* Smooth transition for border effects */
+  flex: 0;                         /* Prevents links from expanding unevenly */
 }
 
 /* Styling the current page link */
@@ -36,3 +35,12 @@ nav a.current {
   border-bottom: 0.4em solid oklch(80% 3% 200); /* Thicker bottom border */
   padding-bottom: 0.1em;             /* Reduces padding to offset border thickness */
 }
+
+/* Style the image for better sizing and alignment */
+img {
+  max-width: 300px;       /* Limit the size of the image */
+  border-radius: 8px;     /* Optional rounded corners for a softer look */
+  margin-right: 1rem;     /* Add space between image and text */
+  float: left;            /* Align the image to the left with text wrapping */
+}
+
