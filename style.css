@@ -1,46 +1,53 @@
+/* General body styling */
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 
-    max-width: 100ch;              /* Limit the width of the content */
-    margin-inline: auto;           /* Center content horizontally */
-    padding: 1rem;                 /* Add padding around the edges */
-    box-sizing: border-box;        /* Ensure padding is included in the width */
-  }
-
-  /* Apply flexbox and basic styling for the navigation bar */
+/* Apply flexbox to the entire nav and the ul for a horizontal layout */
 nav {
-  display: flex;                   /* Enables Flexbox */
-  justify-content: space-around;   /* Even spacing between links */
-  align-items: center;             /* Centers the links vertically */
-  padding: 1rem;                   /* Padding around the navbar */
-  margin-bottom: 1rem;             /* Space between nav and content */
-  border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
+  display: flex;
+  justify-content: flex-start;  
+  gap: 1rem; 
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
-/* Style the navigation links */
+nav ul {
+  display: flex;              /* Makes the list horizontal */
+  list-style: none;           /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+  gap: 1rem;                  /* Adds spacing between the list items */
+}
+
 nav a {
-  text-decoration: none;           /* Removes underline */
-  color: inherit;                  /* Makes links use the same text color as the parent */
-  text-align: center;              /* Centers the text in its box */
-  padding: 0.5em;                  /* Adds spacing inside each link box */
-  flex: 0;                         /* Prevents links from expanding unevenly */
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
 }
 
-/* Styling the current page link */
+/* Current page link style */
 nav a.current {
-  font-weight: bold;                  /* Makes the current page bold */
-  border-bottom: 0.4em solid oklch(80% 3% 200); /* Thicker bottom border */
-  padding-bottom: 0.1em;             /* Reduces padding to offset border thickness */
+  font-weight: bold;
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
 }
 
-/* Style the image for better sizing and alignment */
+/* Fixing the image and text layout with flexbox */
+section {
+  display: flex;                   /* Flexbox for side-by-side layout */
+  align-items: center;             /* Vertical centering */
+  gap: 2rem;                       /* Space between the image and text */
+  flex-wrap: wrap;                 /* Makes it responsive */
+}
+
 img {
-  max-width: 300px;       /* Limit the size of the image */
-  border-radius: 8px;     /* Optional rounded corners for a softer look */
-  margin-right: 1rem;     /* Add space between image and text */
-  float: left;            /* Align the image to the left with text wrapping */
+  max-width: 300px;
+  border-radius: 8px;
+  flex-shrink: 0;                  /* Prevents the image from shrinking */
 }
-
