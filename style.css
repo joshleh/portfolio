@@ -10,16 +10,16 @@ body {
     box-sizing: border-box;        /* Ensure padding is included in the width */
   }
 
-  nav ul {
+nav ul {
     list-style: none;         /* Removes bullet points */
     padding: 0;               /* Removes padding */
     margin: 0;                /* Removes margin */
     display: flex;            /* Horizontal navigation bar */
     gap: 1rem;                /* Adds space between links */
-}
+  }
 
 nav a {
     text-decoration: none;    /* Removes underline */
     color: inherit;           /* Inherits default text color */
-}
+  }
 
