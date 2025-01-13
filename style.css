@@ -10,16 +10,33 @@ body {
     box-sizing: border-box;        /* Ensure padding is included in the width */
   }
 
+/* Apply Flexbox to the <nav> for a flexible layout */
+nav {
+  display: flex;           /* Enables Flexbox */
+  justify-content: space-around; /* Even spacing between links */
+  padding: 1rem;          /* Adds space around the navigation bar */
+  background-color: #f5f5f5; /* Optional background color for visibility */
+  }
+
+/* Remove bullet points and padding from the list */
 nav ul {
-    list-style: none;         /* Removes bullet points */
-    padding: 0;               /* Removes padding */
-    margin: 0;                /* Removes margin */
-    display: flex;            /* Horizontal navigation bar */
-    gap: 1rem;                /* Adds space between links */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;            /* Flexbox for horizontal alignment */
+  gap: 1rem;                /* Adds space between list items */
   }
 
+/* Make each link flexible and take up equal space */
 nav a {
-    text-decoration: none;    /* Removes underline */
-    color: inherit;           /* Inherits default text color */
+  flex: 1;                   /* Makes each link take up equal space */
+  text-align: center;        /* Centers the text */
+  text-decoration: none;     /* Removes underline */
+  color: black;              /* Default link color */
   }
 
+/* Special styling for the current page link */
+nav a.current {
+  font-weight: bold;         /* Makes the current page link bold */
+  color: blue;               /* Changes the color */
+  }
