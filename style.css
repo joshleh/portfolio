@@ -5,6 +5,6 @@ body {
     font: 100%/1.5 system-ui;
 
     max-width: 100ch;  /* Prevents content from being too wide */
-    margin: 0 auto;    /* Centers the content */
+    margin-inline: auto;    /* Centers the content */
     padding: 0 1rem;   /* Optional padding for better spacing */
   }
