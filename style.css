@@ -4,7 +4,8 @@ body {
        */
     font: 100%/1.5 system-ui;
 
-    max-width: 100ch;  /* Prevents content from being too wide */
-    margin-inline: auto;    /* Centers the content */
-    padding: 0 1rem;   /* Optional padding for better spacing */
+    max-width: 100ch;              /* Limit the width of the content */
+    margin-inline: auto;           /* Center content horizontally */
+    padding: 1rem;                 /* Add padding around the edges */
+    box-sizing: border-box;        /* Ensure padding is included in the width */
   }
