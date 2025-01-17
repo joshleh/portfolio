@@ -16,9 +16,10 @@ body {
 /* Navigation bar container */
 nav {
   display: flex; /* Enable Flexbox layout */
-  justify-content: space-between; /* Distribute space evenly between items */
+  justify-content: center; /* Distribute space evenly between items */
   align-items: center; /* Alights the navigation items vertically */
   padding: 0.5rem;
+  width: 100%;
   background-color: #a48870; /* Optional: Add a background color */
   margin-bottom: 1rem;
   border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
