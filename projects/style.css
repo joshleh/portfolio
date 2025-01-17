@@ -17,25 +17,63 @@ nav {
     border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
   }
   
-  nav ul {
+nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;                  /* Spreads the links evenly */
     gap: 2rem;                    /* Adds spacing between links */
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration: none;
     color: inherit;
     padding: 0.5em;
-  }
-  
-  /* Current Page Highlight */
-  nav a.current {
+}
+
+/* Current Page Highlight */
+nav a.current {
     font-weight: bold;
     border-bottom: 0.4em solid oklch(80% 3% 200);
     padding-bottom: 0.1em;
-  }
+}
   
+/* Responsive Grid for Projects */
+.projects {
+    display: grid; /* Makes it a grid container */
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Flexible number of columns */
+    gap: 1.5rem; /* Spacing between grid items */
+    padding: 1rem; /* Optional: Add padding around the grid */
+}
+
+/* Style individual project items */
+.projects article {
+    background-color: #f9f9f9; /* Light background for project items */
+    border: 1px solid #ccc; /* Subtle border around each item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Padding inside each item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center align text and images */
+}
+
+/* Style project images */
+.projects article img {
+    max-width: 100%; /* Ensure images fit within the container */
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 1rem; /* Space below the image */
+}
+
+/* Style project titles */
+.projects article h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333; /* Darker text for titles */
+}
+
+/* Style project descriptions */
+.projects article p {
+    font-size: 1rem;
+    color: #666; /* Softer text color for descriptions */
+    line-height: 1.5;
+}
