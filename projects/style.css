@@ -38,37 +38,40 @@ nav a.current {
     border-bottom: 0.4em solid oklch(80% 3% 200);
     padding-bottom: 0.1em;
 }
-  
-/* Responsive Grid for Projects */
+
+/* Update the grid container */
 .projects {
-    display: grid; /* Makes it a grid container */
+    display: grid; /* Enables grid layout */
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Flexible number of columns */
-    gap: 1.5rem; /* Spacing between grid items */
-    padding: 1rem; /* Optional: Add padding around the grid */
+    gap: 1rem; /* Spacing between grid items */
+    padding: 1rem; /* Optional padding around the grid */
 }
 
-/* Style individual project items */
+/* Individual project items */
 .projects article {
+    display: grid; /* Makes each article a grid container */
+    grid-template-rows: subgrid; /* Aligns content horizontally across the grid */
+    grid-row: span 3; /* Each article spans 3 rows */
     background-color: #f9f9f9; /* Light background for project items */
-    border: 1px solid #ccc; /* Subtle border around each item */
+    border: 1px solid #ccc; /* Subtle border */
     border-radius: 8px; /* Rounded corners */
-    padding: 1rem; /* Padding inside each item */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1rem; /* Padding inside each article */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center align text and images */
+}
+
+/* Remove extra margin from headings */
+.projects article h2 {
+    font-size: 1.25rem;
+    margin: 0; /* Removes default margin to avoid extra spacing */
+    color: #333; /* Darker text for titles */
 }
 
 /* Style project images */
 .projects article img {
-    max-width: 100%; /* Ensure images fit within the container */
-    border-radius: 4px; /* Rounded corners for images */
-    margin-bottom: 1rem; /* Space below the image */
-}
-
-/* Style project titles */
-.projects article h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #333; /* Darker text for titles */
+    max-width: 100%; /* Images fit within the container */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 1rem; /* Spacing below the image */
 }
 
 /* Style project descriptions */
