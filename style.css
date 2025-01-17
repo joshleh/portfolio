@@ -1,3 +1,7 @@
+/* Define custom properties at the top */
+:root {
+  --color-accent: oklch(70% 0.0873 71.1); /* Custom accent color */
+
 /* General body styling */
 body {
   font: 100%/1.5 system-ui;
@@ -16,7 +20,7 @@ nav {
   padding: 0.5rem;
   background-color: #a48870; /* Optional: Add a background color */
   margin-bottom: 1rem;
-  border-bottom: 1px solid #8C92AC; /* Optional: Add a subtle border */
+  border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
 }
 
 /* Remove list styling and apply Flexbox to the list */
@@ -51,8 +55,10 @@ nav a.current {
 
 /* Hover effect for navigation links */
 nav a:hover {
-  background-color: #e0e0e0; /* Light gray hover effect */
-  color: #000; /* Optional: Darker text on hover */
+  color: inherit;
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.2em;
+  background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
 }
 
 
