@@ -1,6 +1,7 @@
 /* Define custom properties at the top */
 :root {
   --color-accent: oklch(70% 0.0873 71.1); /* Custom accent color */
+}
 
 /* General body styling */
 body {
