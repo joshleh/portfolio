@@ -7,6 +7,49 @@ body {
     background-color: #a48870
 }
 
+/* Navigation bar container */
+nav {
+    display: flex; /* Enable Flexbox layout */
+    justify-content: space-between; /* Distribute space evenly between items */
+    padding: 1rem;
+    background-color: #a48870; /* Optional: Add a background color */
+    border-bottom: 2px solid #8C92AC; /* Optional: Add a subtle border */
+  }
+  
+  /* Remove list styling and apply Flexbox to the list */
+  nav ul {
+    display: flex; /* Enable Flexbox for the list */
+    list-style: none;
+    gap: 1rem; /* Space between links */
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Allow items to grow and take up equal space */
+  }
+  
+  /* Navigation links */
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    flex: 1; /* Allow each link to take up an equal amount of space */
+    text-align: center; /* Center-align text inside links */
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Highlight the current page */
+  nav a.current {
+    font-weight: bold;
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  /* Hover effect for navigation links */
+  nav a:hover {
+    background-color: #e0e0e0; /* Light gray hover effect */
+    color: #000; /* Optional: Darker text on hover */
+  }
+
 /* Styling for form labels and controls */
 label, input, textarea, button {
     display: block;

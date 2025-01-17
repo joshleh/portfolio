@@ -8,14 +8,13 @@ body {
   background-color: #a48870
 }
 
-/* NAVIGATION BAR FIX - Evenly spaced links across the entire navbar */
 /* Navigation bar container */
 nav {
   display: flex; /* Enable Flexbox layout */
   justify-content: space-between; /* Distribute space evenly between items */
   padding: 1rem;
-  background-color: #f5f5f5; /* Optional: Add a background color */
-  border-bottom: 2px solid #ccc; /* Optional: Add a subtle border */
+  background-color: #a48870; /* Optional: Add a background color */
+  border-bottom: 2px solid #8C92AC; /* Optional: Add a subtle border */
 }
 
 /* Remove list styling and apply Flexbox to the list */
