@@ -5,6 +5,7 @@ body {
   margin-inline: auto;
   padding: 1rem;
   box-sizing: border-box;
+  background-color: #a48870
 }
 
 /* NAVIGATION BAR FIX - Evenly spaced links across the entire navbar */
