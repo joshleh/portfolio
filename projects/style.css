@@ -1,3 +1,36 @@
+/* Global styles for headings */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1; /* Smaller leading for headings compared to body text */
+    text-wrap: balance; /* Prevent uneven lines in headings */
+}
+
+/* Specific adjustments for heading sizes */
+h1 {
+    font-size: 2.5rem; /* Larger size for main headings */
+    margin-bottom: 1rem; /* Add spacing below */
+}
+
+h2 {
+    font-size: 1.75rem; /* Adjust for subheadings */
+    margin: 0; /* Remove unnecessary margins */
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
 body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
