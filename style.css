@@ -42,7 +42,7 @@ nav a {
   flex: 1; /* Allow each link to take up an equal amount of space */
   text-align: center; /* Center-align text inside links */
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: 0;
   transition: background-color 0.3s ease;
 }
 
