@@ -1,0 +1,37 @@
+/* General Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: space-around; /* Evenly spaced links */
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f5; /* Light background */
+    border-bottom: 2px solid #ccc; /* Subtle border below the nav */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Spacing between nav items */
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Neutral text color */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+    color: #000; /* Darker text on hover */
+}
+
+nav a.current {
+    background-color: #007BFF; /* Highlight the current page */
+    color: #fff;
+    border-radius: 4px;
+}
