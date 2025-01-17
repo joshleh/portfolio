@@ -7,42 +7,35 @@ body {
     background-color: #a48870
 }
 
-/* General Navigation Bar Styling */
+/* NAVIGATION BAR FIX - Evenly spaced links across the entire navbar */
 nav {
     display: flex;
-    justify-content: space-around; /* Evenly spaced links */
+    justify-content: space-between;  /* Evenly spaced along the entire width */
     align-items: center;
     padding: 1rem;
-    background-color: #f5f5f5; /* Light background */
-    border-bottom: 2px solid #ccc; /* Subtle border below the nav */
-}
-
-nav ul {
-    list-style: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
+  }
+  
+  nav ul {
     display: flex;
-    gap: 1.5rem; /* Spacing between nav items */
+    list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav a {
+    width: 100%;                  /* Spreads the links evenly */
+    gap: 2rem;                    /* Adds spacing between links */
+  }
+  
+  nav a {
     text-decoration: none;
-    color: #333; /* Neutral text color */
+    color: inherit;
+    padding: 0.5em;
+  }
+  
+  /* Current Page Highlight */
+  nav a.current {
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #e0e0e0; /* Light gray on hover */
-    color: #000; /* Darker text on hover */
-}
-
-nav a.current {
-    background-color: #007BFF; /* Highlight the current page */
-    color: #fff;
-    border-radius: 4px;
-}
-
-
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.1em;
+  }
+  

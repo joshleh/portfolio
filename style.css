@@ -10,34 +10,7 @@ body {
 
 /* NAVIGATION BAR FIX - Evenly spaced links across the entire navbar */
 nav {
-  display: flex;
-  justify-content: space-between;  /* Evenly spaced along the entire width */
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;                  /* Spreads the links evenly */
-  gap: 2rem;                    /* Adds spacing between links */
-}
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.5em;
-}
-
-/* Current Page Highlight */
-nav a.current {
-  font-weight: bold;
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-  padding-bottom: 0.1em;
+  display: contents;
 }
 
 /* IMAGE AND TEXT LAYOUT FIX - Align image and text to the left */
