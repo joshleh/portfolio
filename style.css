@@ -16,7 +16,7 @@ body {
 /* Navigation bar container */
 nav {
   display: flex; /* Enable Flexbox layout */
-  justify-content: center; /* Distribute space evenly between items */
+  justify-content: space-evenly; /* Distribute space evenly between items */
   align-items: center; /* Alights the navigation items vertically */
   padding: 0.5rem;
   width: 100%;
