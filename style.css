@@ -13,9 +13,10 @@ nav {
   display: flex; /* Enable Flexbox layout */
   justify-content: space-between; /* Distribute space evenly between items */
   align-items: center; /* Alights the navigation items vertically */
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #a48870; /* Optional: Add a background color */
-  border-bottom: 2px solid #8C92AC; /* Optional: Add a subtle border */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #8C92AC; /* Optional: Add a subtle border */
 }
 
 /* Remove list styling and apply Flexbox to the list */
@@ -42,8 +43,10 @@ nav a {
 /* Highlight the current page */
 nav a.current {
   font-weight: bold;
-  background-color: #007BFF;
-  color: #fff;
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.2em;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Hover effect for navigation links */
