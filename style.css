@@ -10,7 +10,8 @@ body {
 
 /* NAVIGATION BAR FIX - Evenly spaced links across the entire navbar */
 nav {
-  display: contents;
+  display: flex;
+  flex: 1
 }
 
 /* IMAGE AND TEXT LAYOUT FIX - Align image and text to the left */
