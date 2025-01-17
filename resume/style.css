@@ -1,3 +1,12 @@
+body {
+    font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #a48870
+}
+
 /* General Navigation Bar Styling */
 nav {
     display: flex;
@@ -36,6 +45,4 @@ nav a.current {
     border-radius: 4px;
 }
 
-body {
-    background-color: #a48870
-}
+
