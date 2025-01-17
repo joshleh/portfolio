@@ -53,12 +53,14 @@ nav a.current {
   padding-bottom: 0.2em;
   color: inherit;
   text-decoration: none;
+  border-radius: 0;
 }
 
 /* Hover effect for navigation links */
 nav a:hover {
   color: inherit;
   border-bottom: 0.4em solid var(--color-accent);
+  border-radius: 0;
   padding-bottom: 0.2em;
   background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
 }
