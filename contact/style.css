@@ -1,0 +1,29 @@
+/* Styling for form labels and controls */
+label, input, textarea, button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Add spacing between labels and controls */
+label {
+    margin-block: 0.5em;
+}
+
+input, textarea {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+/* Style the submit button */
+button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+/* Optional: Add form container styling for alignment */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
