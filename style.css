@@ -10,11 +10,12 @@ body {
   margin-inline: auto;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: red;
+  background-color: #a48870;
 }
 
 /* Navigation bar container */
 nav {
+  background-color: red;
   display: flex; /* Enable Flexbox layout */
   align-items: center; /* Alights the navigation items vertically */
   padding: 0.5rem;
@@ -26,6 +27,7 @@ nav {
 
 /* Remove list styling and apply Flexbox to the list */
 nav ul {
+  background-color: blue;
   display: flex; /* Enable Flexbox for the list */
   list-style: none;
   padding: 0;
