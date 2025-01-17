@@ -30,7 +30,6 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex: 1; /* Allow items to grow and take up equal space */
   width: 100%;
 }
 
