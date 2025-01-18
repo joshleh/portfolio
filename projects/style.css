@@ -1,3 +1,8 @@
+/* Define custom properties at the top */
+:root {
+    --color-accent: oklch(70% 0.0873 71.1); /* Custom accent color */
+}
+
 /* Global styles for headings */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1; /* Smaller leading for headings compared to body text */
@@ -40,37 +45,56 @@ body {
     background-color: #a48870
 }
 
-/* NAVIGATION BAR FIX - Evenly spaced links across the entire navbar */
+/* Navigation bar container */
 nav {
-    display: flex;
-    justify-content: space-between;  /* Evenly spaced along the entire width */
-    align-items: center;
-    padding: 1rem;
+    display: flex; /* Enable Flexbox layout */
+    align-items: center; /* Alights the navigation items vertically */
+    width: 100%;
+    background-color: #a48870; /* Optional: Add a background color */
     margin-bottom: 1rem;
-    border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
   }
   
-nav ul {
-    display: flex;
+  /* Remove list styling and apply Flexbox to the list */
+  nav ul {
+    display: contents; /* step 2.1 */
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;                  /* Spreads the links evenly */
-    gap: 2rem;                    /* Adds spacing between links */
-}
-
-nav a {
+    width: 100%;
+  }
+  
+  /* Navigation links */
+  nav a {
     text-decoration: none;
     color: inherit;
-    padding: 0.5em;
-}
-
-/* Current Page Highlight */
-nav a.current {
+    flex: 1; /* Allow each link to take up an equal amount of space */
+    text-align: center; /* Center-align text inside links */
+    padding: 0.5rem;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Highlight the current page */
+  nav a.current {
     font-weight: bold;
     border-bottom: 0.4em solid oklch(80% 3% 200);
-    padding-bottom: 0.1em;
-}
+    padding-bottom: 0.2em;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for navigation links */
+  nav a:hover {
+    color: inherit;
+    border-bottom: 0.4em solid var(--color-accent);
+    padding-bottom: 0.2em;
+    background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
+  }
+  
+  li {
+    display: contents;
+  }
 
 /* Update the grid container */
 .projects {

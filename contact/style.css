@@ -1,3 +1,8 @@
+/* Define custom properties at the top */
+:root {
+  --color-accent: oklch(70% 0.0873 71.1); /* Custom accent color */
+}
+
 body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
@@ -6,61 +11,79 @@ body {
     box-sizing: border-box;
     background-color: #a48870
 }
-
 /* Navigation bar container */
 nav {
-    display: flex; /* Enable Flexbox layout */
-    justify-content: space-between; /* Distribute space evenly between items */
-    padding: 1rem;
-    background-color: #a48870; /* Optional: Add a background color */
-    border-bottom: 2px solid #8C92AC; /* Optional: Add a subtle border */
-  }
-  
-  /* Remove list styling and apply Flexbox to the list */
-  nav ul {
-    display: flex; /* Enable Flexbox for the list */
-    list-style: none;
-    gap: 1rem; /* Space between links */
-    padding: 0;
-    margin: 0;
-    flex: 1; /* Allow items to grow and take up equal space */
-  }
-  
-  /* Navigation links */
-  nav a {
-    text-decoration: none;
-    color: inherit;
-    flex: 1; /* Allow each link to take up an equal amount of space */
-    text-align: center; /* Center-align text inside links */
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Highlight the current page */
-  nav a.current {
-    font-weight: bold;
-    background-color: #007BFF;
-    color: #fff;
-  }
-  
-  /* Hover effect for navigation links */
-  nav a:hover {
-    background-color: #e0e0e0; /* Light gray hover effect */
-    color: #000; /* Optional: Darker text on hover */
-  }
+  display: flex; /* Enable Flexbox layout */
+  align-items: center; /* Alights the navigation items vertically */
+  width: 100%;
+  background-color: #a48870; /* Optional: Add a background color */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
+}
+
+/* Remove list styling and apply Flexbox to the list */
+nav ul {
+  display: contents; /* step 2.1 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+  color: inherit;
+  flex: 1; /* Allow each link to take up an equal amount of space */
+  text-align: center; /* Center-align text inside links */
+  padding: 0.5rem;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Highlight the current page */
+nav a.current {
+  font-weight: bold;
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.2em;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  color: inherit;
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.2em;
+  background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
+}
+
+li {
+  display: contents;
+}
 
 /* Styling for form labels and controls */
-label, input, textarea, button {
+input, textarea, button {
     display: block;
     width: 100%;
     box-sizing: border-box;
+    font: inherit;
+}
+
+label {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  /* grid-template-columns: auto 1fr; */
 }
 
 /* Add spacing between labels and controls */
-label {
-    margin-block: 0.5em;
-}
+/* label {
+    /* margin-block: 0.5em; */
+/* } */
 
 input, textarea {
     margin-bottom: 1em;
@@ -72,11 +95,16 @@ button {
     margin-top: 1em;
     padding: 0.5em 1em;
     cursor: pointer;
+    grid-column: 1 / -1;
 }
 
 /* Optional: Add form container styling for alignment */
 form {
-    max-width: 600px;
+    /* max-width: 100%; */
     margin: 0 auto;
+    /* box-sizing: border-box; */
+    grid-template-columns: auto 1fr;
+    display: grid;
+    gap: 1em;
 }
 

@@ -1,3 +1,8 @@
+/* Define custom properties at the top */
+:root {
+    --color-accent: oklch(70% 0.0873 71.1); /* Custom accent color */
+}
+
 body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
@@ -7,42 +12,55 @@ body {
     background-color: #a48870
 }
 
-/* General Navigation Bar Styling */
+/* Navigation bar container */
 nav {
-    display: flex;
-    justify-content: space-around; /* Evenly spaced links */
-    align-items: center;
-    padding: 1rem;
-    background-color: #f5f5f5; /* Light background */
-    border-bottom: 2px solid #ccc; /* Subtle border below the nav */
-}
-
-nav ul {
+    display: flex; /* Enable Flexbox layout */
+    align-items: center; /* Alights the navigation items vertically */
+    width: 100%;
+    background-color: #a48870; /* Optional: Add a background color */
+    margin-bottom: 1rem;
+    border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
+  }
+  
+  /* Remove list styling and apply Flexbox to the list */
+  nav ul {
+    display: contents; /* step 2.1 */
     list-style: none;
-    display: flex;
-    gap: 1.5rem; /* Spacing between nav items */
     padding: 0;
     margin: 0;
-}
-
-nav a {
+    width: 100%;
+  }
+  
+  /* Navigation links */
+  nav a {
     text-decoration: none;
-    color: #333; /* Neutral text color */
+    color: inherit;
+    flex: 1; /* Allow each link to take up an equal amount of space */
+    text-align: center; /* Center-align text inside links */
+    padding: 0.5rem;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Highlight the current page */
+  nav a.current {
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #e0e0e0; /* Light gray on hover */
-    color: #000; /* Darker text on hover */
-}
-
-nav a.current {
-    background-color: #007BFF; /* Highlight the current page */
-    color: #fff;
-    border-radius: 4px;
-}
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.2em;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for navigation links */
+  nav a:hover {
+    color: inherit;
+    border-bottom: 0.4em solid var(--color-accent);
+    padding-bottom: 0.2em;
+    background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
+  }
+  
+  li {
+    display: contents;
+  }
 
 

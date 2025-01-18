@@ -11,7 +11,7 @@
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="index.html">Contact</a></li>
+            <li><a href="index.html" class="current">Contact</a></li>
             <li><a href="../projects/index.html">Projects</a></li>
             <li><a href="../resume/index.html">Resume</a></li>
             <li><a href="https://github.com/joshleh" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
@@ -23,16 +23,19 @@
 
     <form action="mailto: joshuadmlee@gmail.com" method="POST" enctype="text/plain">
         <!-- Sender's Email Field -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required>
+        </label>
+        
         <!-- Subject Field -->
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-
+        <label for="subject">Subject:
+            <input type="text" id="subject" name="subject" required>
+        </label>
+        
         <!-- Message Field -->
-        <label for="body">Message:</label>
-        <textarea id="body" name="body" rows="4" required></textarea>
+        <label for="body">Message:
+            <textarea id="body" name="body" rows="4" required></textarea>
+        </label>
 
         <!-- Submit Button -->
         <button>Send Message</button>

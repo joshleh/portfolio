@@ -15,10 +15,8 @@ body {
 
 /* Navigation bar container */
 nav {
-  background-color: red;
   display: flex; /* Enable Flexbox layout */
   align-items: center; /* Alights the navigation items vertically */
-  padding: 0.5rem;
   width: 100%;
   background-color: #a48870; /* Optional: Add a background color */
   margin-bottom: 1rem;
@@ -27,8 +25,7 @@ nav {
 
 /* Remove list styling and apply Flexbox to the list */
 nav ul {
-  background-color: blue;
-  display: flex; /* Enable Flexbox for the list */
+  display: contents; /* step 2.1 */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -61,6 +58,10 @@ nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.2em;
   background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
+}
+
+li {
+  display: contents;
 }
 
 
