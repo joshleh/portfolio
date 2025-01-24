@@ -65,14 +65,14 @@ li {
 }
 
 /* Styling for form labels and controls */
-input, textarea, button {
+form input, textarea, button {
     display: block;
     width: 100%;
     box-sizing: border-box;
     font: inherit;
 }
 
-label {
+form label {
   display: grid;
   width: 100%;
   box-sizing: border-box;
