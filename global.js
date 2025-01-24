@@ -32,17 +32,22 @@ for (let p of pages) {
     let url = p.url;
     let title = p.title;
 
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
-
+    // Adjust relative URLs for pages not on the home page
+    if (!ARE_WE_HOME && !url.startsWith('http')) {
+        url = '../' + url;
+    }
+    
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
 
+    // Highlight the current page
     a.classList.toggle(
         'current',
         a.host === location.host && a.pathname === location.pathname
     );
 
+    // Open external links in a new tab
     if (a.host !== location.host) {
         a.target = '_blank';
     }
