@@ -1,6 +1,7 @@
 /* Define custom properties at the top */
 :root {
     --color-accent: oklch(70% 0.0873 71.1); /* Custom accent color */
+    color-scheme: light dark;
 }
 
 body {
@@ -14,53 +15,67 @@ body {
 
 /* Navigation bar container */
 nav {
-    display: flex; /* Enable Flexbox layout */
-    align-items: center; /* Alights the navigation items vertically */
-    width: 100%;
-    background-color: #a48870; /* Optional: Add a background color */
-    margin-bottom: 1rem;
-    border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
-  }
-  
-  /* Remove list styling and apply Flexbox to the list */
-  nav ul {
-    display: contents; /* step 2.1 */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
-  /* Navigation links */
-  nav a {
-    text-decoration: none;
-    color: inherit;
-    flex: 1; /* Allow each link to take up an equal amount of space */
-    text-align: center; /* Center-align text inside links */
-    padding: 0.5rem;
-    border-radius: 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Highlight the current page */
-  nav a.current {
-    font-weight: bold;
-    border-bottom: 0.4em solid oklch(80% 3% 200);
-    padding-bottom: 0.2em;
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  /* Hover effect for navigation links */
-  nav a:hover {
-    color: inherit;
-    border-bottom: 0.4em solid var(--color-accent);
-    padding-bottom: 0.2em;
-    background-color: oklch(from var(--color-accent) 95% 5% h); /* Light gray hover effect */ /* Optional: Darker text on hover */
-  }
-  
-  li {
-    display: contents;
-  }
+  display: flex; /* Enable Flexbox layout */
+  align-items: center; /* Alights the navigation items vertically */
+  width: 100%;
+  background-color: #a48870; /* Optional: Add a background color */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
+
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+}
+
+/* Remove list styling and apply Flexbox to the list */
+nav ul {
+  display: contents; /* step 2.1 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+  color: inherit;
+  flex: 1; /* Allow each link to take up an equal amount of space */
+  text-align: center; /* Center-align text inside links */
+  padding: 0.5rem;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Highlight the current page */
+nav a.current {
+  font-weight: bold;
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.2em;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  color: inherit;
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.2em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+li {
+  display: contents;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+.color-scheme select {
+  font: inherit;
+}
 
 

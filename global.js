@@ -36,7 +36,7 @@ for (let p of pages) {
     if (!ARE_WE_HOME && !url.startsWith('http')) {
         url = '../' + url;
     }
-    
+
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
@@ -54,6 +54,44 @@ for (let p of pages) {
 
     nav.append(a);
 }
+
+document.body.insertAdjacentHTML(
+    'afterbegin',
+    `
+    <label class="color-scheme">
+        Theme:
+        <select>
+            <option value="light dark">Automatic</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    `
+);
+
+// Get the select element
+const select = document.querySelector('.color-scheme select');
+
+// Function to set the color scheme
+function setColorScheme(scheme) {
+    document.documentElement.style.setProperty('color-scheme', scheme);
+    localStorage.colorScheme = scheme; // Save preference
+    select.value = scheme; // Update the dropdown
+}
+
+// Event listener for user input
+select.addEventListener('input', (event) => {
+    setColorScheme(event.target.value);
+});
+
+// Load and apply saved preference on page load
+if ('colorScheme' in localStorage) {
+    setColorScheme(localStorage.colorScheme);
+} else {
+    setColorScheme('light dark'); // Default to Automatic
+}
+
+
 
 
 
