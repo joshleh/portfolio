@@ -10,14 +10,12 @@ body {
   margin-inline: auto;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #a48870
 }
 /* Navigation bar container */
 nav {
   display: flex; /* Enable Flexbox layout */
   align-items: center; /* Alights the navigation items vertically */
   width: 100%;
-  background-color: #a48870; /* Optional: Add a background color */
   margin-bottom: 1rem;
   border-bottom: 1px solid oklch(80% 3% 200); /* Optional: Add a subtle border */
 
