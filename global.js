@@ -41,6 +41,14 @@ for (let p of pages) {
     a.href = url;
     a.textContent = title;
 
+    // Debugging: Log current URL and the matching logic
+    console.log('Processing link:', a.href);
+    console.log('Current page location:', location.href);
+    console.log('Does it match?',
+        (a.host === location.host && a.pathname === location.pathname) ||
+        (ARE_WE_HOME && a.pathname.endsWith('index.html') && location.pathname === '/')
+    );
+    
     // Highlight the current page
     a.classList.toggle(
         'current',
