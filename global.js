@@ -48,15 +48,15 @@ for (let p of pages) {
         'Does it match?',
         (a.host === location.host &&
             (a.pathname === location.pathname ||
-            (a.pathname.endsWith('/index.html') && location.pathname === '/')))
+            (a.pathname.endsWith('/index.html') && location.pathname === '')))
     );
-    
+
     // Highlight the current page
     a.classList.toggle(
         'current',
         (a.host === location.host &&
             (a.pathname === location.pathname ||
-            (a.pathname.endsWith('/index.html') && location.pathname === '/')))
+            (a.pathname.endsWith('/index.html') && location.pathname === '')))
     );
 
     // Open external links in a new tab
