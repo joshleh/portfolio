@@ -28,6 +28,14 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home');
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
+// Normalize paths to ensure matching works
+function normalizePath(path) {
+    if (path.endsWith('/')) {
+        return path + 'index.html';
+    }
+    return path;
+}
+
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
@@ -46,17 +54,13 @@ for (let p of pages) {
     console.log('Current page location:', location.href);
     console.log(
         'Does it match?',
-        (a.host === location.host &&
-            (a.pathname === location.pathname ||
-            (a.pathname.endsWith('/index.html') && location.pathname === '')))
+        normalizePath(a.pathname) === normalizePath(location.pathname)
     );
 
     // Highlight the current page
     a.classList.toggle(
         'current',
-        (a.host === location.host &&
-            (a.pathname === location.pathname ||
-            (a.pathname.endsWith('/index.html') && location.pathname === '')))
+        normalizePath(a.pathname) === normalizePath(location.pathname)
     );
 
     // Open external links in a new tab
