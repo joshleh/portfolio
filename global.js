@@ -44,7 +44,8 @@ for (let p of pages) {
     // Highlight the current page
     a.classList.toggle(
         'current',
-        a.host === location.host && a.pathname === location.pathname
+        (a.host === location.host && a.pathname === location.pathname) ||
+        (ARE_WE_HOME && a.pathname.endsWith('index.html') && location.pathname === '/')
     );
 
     // Open external links in a new tab
