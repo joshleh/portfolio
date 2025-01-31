@@ -109,7 +109,6 @@ section p {
 
 #profile-stats dt {
   font-weight: bold;
-  color: #555;
   text-transform: uppercase;
   grid-row: 1; /* Place all dt elements in the first row */
 }
@@ -117,7 +116,6 @@ section p {
 #profile-stats dd {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
   grid-row: 2; /* Place all dd elements in the second row */
   margin: 0; /* Remove any default margin */
 }
