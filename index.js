@@ -12,14 +12,27 @@ const githubData = await fetchGitHubData('joshleh');
 // Lab 4 Step 3.4
 const profileStats = document.querySelector('#profile-stats');
 
+// // Lab 4 Step 3.3 - 3.5
+// if (profileStats) {
+//   profileStats.innerHTML = `
+//     <dl>
+//       <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
+//       <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
+//       <dt>Followers:</dt><dd>${githubData.followers}</dd>
+//       <dt>Following:</dt><dd>${githubData.following}</dd>
+//     </dl>
+//   `;
+// }
+
 // Lab 4 Step 3.3 - 3.5
-if (profileStats) {
-  profileStats.innerHTML = `
-    <dl>
-      <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
-      <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
-      <dt>Followers:</dt><dd>${githubData.followers}</dd>
-      <dt>Following:</dt><dd>${githubData.following}</dd>
-    </dl>
-  `;
+if (profileStats && githubData) {
+    profileStats.innerHTML = `
+        <dl>
+            <dt>Followers</dt> <dd>${githubData.followers}</dd>
+            <dt>Following</dt> <dd>${githubData.following}</dd>
+            <dt>Public Repos</dt> <dd>${githubData.public_repos}</dd>
+            <dt>Public Gists</dt> <dd>${githubData.public_gists}</dd>
+        </dl>
+    `;
 }
+
