@@ -140,6 +140,12 @@ nav {
     line-height: 1.5;
 }
 
+.project-year {
+    color: gray;
+    font-family: Baskerville, serif;
+    font-variant-numeric: oldstyle-nums;
+}
+
 .color-scheme {
     position: absolute;
     top: 1rem;
