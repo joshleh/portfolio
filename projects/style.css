@@ -146,6 +146,12 @@ nav {
     font-variant-numeric: oldstyle-nums;
 }
 
+.project-item {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 1em;
+}
+
 .color-scheme {
     position: absolute;
     top: 1rem;
