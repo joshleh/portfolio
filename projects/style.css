@@ -169,3 +169,37 @@ nav {
 .color-scheme select {
     font: inherit;
 }
+
+/* Lab 5 Step 2.2 */
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.legend li {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.legend .swatch {
+width: 1em;
+height: 1em;
+background-color: var(--color);
+border-radius: 50%;
+display: inline-block;
+}
+
+/* Lab 5 Step 2.3 */
+.container {
+display: flex;
+gap: 2rem;
+align-items: flex-start;
+}
+  
+  
