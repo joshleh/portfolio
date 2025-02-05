@@ -7,6 +7,9 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 // Color Scale
 let colors = d3.scaleOrdinal(d3.schemeTableau10); // Lab 5 Step 1.5
 
+// Lab 5 Step 5.2.1
+let selectedIndex = -1;
+
 // Fetch project data and render project list
 const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
@@ -63,19 +66,61 @@ function renderPieChart(projectsGiven) {
         .enter()
         .append('path')
         .attr('d', arcGenerator)
-        .attr('fill', (d, idx) => colors(idx));
+        .attr('fill', (d, idx) => colors(idx))
+        // Lab 5 Step 5.2.2
+        .attr('class', (d, idx) => idx === selectedIndex ? 'selected' : '') // Highlight if selected
+        .on('click', function (event, d) {
+            selectedIndex = selectedIndex === d.index ? -1 : d.index;
+
+            // Re-render pie slices with updated classes
+            d3.select('#projects-plot')
+                .selectAll('path')
+                .attr('class', (d, idx) => idx === selectedIndex ? 'selected' : '');
+
+            // Re-render legend with updated classes
+            d3.select('.legend')
+                .selectAll('li')
+                .attr('class', (d, idx) => idx === selectedIndex ? 'selected' : '');
+
+            // Filter projects by the selected year
+            filterProjectsByYear(selectedIndex === -1 ? null : data[selectedIndex].label);
+        });
 
     // Generate legend items
     let legend = d3.select('.legend');
     data.forEach((d, idx) => {
         legend.append('li')
         .attr('style', `--color:${colors(idx)}`)
-        .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+        .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+        .attr('class', idx === selectedIndex ? 'selected' : '')
+        .on('click', () => {
+            selectedIndex = selectedIndex === idx ? -1 : idx;
+            d3.select('#projects-plot')
+                .selectAll('path')
+                .attr('class', (d, i) => i === selectedIndex ? 'selected' : '');
+
+            d3.select('.legend')
+                .selectAll('li')
+                .attr('class', (d, i) => i === selectedIndex ? 'selected' : '');
+
+            filterProjectsByYear(selectedIndex === -1 ? null : data[selectedIndex].label);
+        });
     });
 }
 
 // Lab 5 Step 4.4 - Initial render
 renderPieChart(projects);
+
+// Lab 5 Step 5.3
+function filterProjectsByYear(year) {
+    let filteredProjects = year 
+        ? projects.filter((project) => project.year === year) 
+        : projects;
+
+    // Re-render project list and pie chart
+    renderProjects(filteredProjects, projectsContainer, 'h2');
+    renderPieChart(filteredProjects);
+}
 
 // // Lab 5 Step 3.1
 // let rolledData = d3.rollups(

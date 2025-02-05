@@ -201,5 +201,26 @@ display: flex;
 gap: 2rem;
 align-items: flex-start;
 }
+
+/* Lab 5 Step 5.1 */
+path {
+    transition: 300ms ease;
+    cursor: pointer; /* Indicate that the wedge is clickable */
+}
+
+svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+/* Lab 5 Step 5.2.3 */
+.selected {
+    --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+    fill: var(--color);
+}
+
+
   
   
