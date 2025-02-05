@@ -9,9 +9,6 @@ const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 
-// Lab 5 Step 1.3
-let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-
 let arc = arcGenerator({
   startAngle: 0,
   endAngle: 2 * Math.PI,
@@ -35,33 +32,23 @@ let data = [
     { value: 5, label: 'Cherries' }
 ];  
 
-let total = data.reduce((acc, val) => acc + val, 0);
-let angle = 0;
-
-data.forEach(d => {
-  let endAngle = angle + (d / total) * 2 * Math.PI;
-  arcData.push({ startAngle: angle, endAngle });
-  angle = endAngle;
-});
-
 // Lab 5 Step 2.1
 let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
-let arcs = arcData.map((d) => arcGenerator(d));
+
 
 let colors = d3.scaleOrdinal(d3.schemeTableau10); // Lab 5 Step 1.5
 
-// Lab 5 Step 1.5
-arcs.forEach((arc, idx) => {
+let arcGenerator = d3.arc().innerRadius(0).outerRadius(50); // Lab 5 Step 1.3
+arcData.forEach((d, idx) => {
     d3.select('#projects-plot')
       .append('path')
-      .attr('d', arc)
-      .attr('fill', colors(idx));  // Use dynamic colors
-  });
+      .attr('d', arcGenerator(d))
+      .attr('fill', colors(idx));
+});
 
 // Lab 5 Step 2.2
 let legend = d3.select('.legend');
-
 data.forEach((d, idx) => {
   legend.append('li')
     .attr('style', `--color:${colors(idx)}`)
