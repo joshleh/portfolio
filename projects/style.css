@@ -186,6 +186,7 @@ nav {
     align-items: center;
     gap: 0.5rem;
     padding: 0.3em;
+    color: black;
 }
 
 .legend .swatch {
@@ -222,12 +223,9 @@ svg:has(path:hover) path:not(:hover) {
     fill: var(--color);
 }
 
-body.dark-mode .legend {
-    color: black;
-}
-
-body.light-mode .legend {
-    color: black;
+body.dark-mode .legend li,
+body.light-mode .legend li{
+    color: black !important;
 }
 
 
