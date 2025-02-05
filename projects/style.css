@@ -152,6 +152,13 @@ nav {
     gap: 1em;
 }
 
+/* Lab 5 Step 1.1*/
+#projects-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+  }  
+
 .color-scheme {
     position: absolute;
     top: 1rem;
