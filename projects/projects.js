@@ -71,9 +71,7 @@ function renderPieChart(projectsGiven) {
         .attr('class', (d, idx) => idx === selectedIndex ? 'selected' : '') // Highlight if selected
         .on('click', function (event, d) {
             selectedIndex = selectedIndex === d.index ? -1 : d.index;
-
-            // Re-render the UI
-            updateSelection(data);
+            updateSelection(data); // Update only the highlighting, no data filtering
         });
 
     // Generate legend items
