@@ -1,27 +1,39 @@
 [
 	{
-		"title": "Analyzing motorcycle parts sales",
-        "year": "2019",
+		"title": "Dating App Matching Algorithm",
+        "year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Explored the data of a company that sells motorcycle parts. Gained insights into their wholesale sales over time across three warehouse sites, assisting in understanding the revenue streams better. Determined how much net revenue the company will generate across its product lines each month and at each warehouse."
+		"description": "Created a dating app matching algorithm that analyzes user preferences, interests, and behavioral patterns using advanced machine learning. It prioritizes compatibility by factoring in shared values, mutual goals, and personality traits, while leveraging real-time engagement data to suggest high-potential matches. This ensures users receive personalized, meaningful connections, promoting long-term compatibility over surface-level attraction."
 	},
 	{
-		"title": "Employee payroll management system",
-        "year": "2019",
+		"title": "Analyzing unicorn companies",
+        "year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Developed a comprehensive Payroll Management System , leveraging the NYC Payroll dataset to facilitate efficient tracking, analysis, and reporting of employee salary and related information."
+		"description": "Explored booming industries and investment opportunities using a MySQL database to analyze unicorn companies worth over $1 billion. Identified high-valuation sectors and examined annual new unicorn production from 2019 to 2021. Leveraged the rise of amateur investors and accessible trading platforms to understand global companies' financial performance for informed investment decisions."
 	},
 	{
-		"title": "Mental Health in the Tech Industry",
-        "year": "2020",
+		"title": "League of Legends First Blood Statistical Analysis",
+        "year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Studied employee data in the IT business, focusing on their perspectives on mental health. Investigated and analyzed attitudes of mental health, as well as the prevalence of mental health illnesses, particularly in the technology industry."
+		"description": "Investigated the significance of the “first blood” event in League of Legends matches and its impact on match statistics and outcomes with various stages of analysis, starting from exploratory data analysis to hypothesis testing, creation of baseline models, and concluding with fairness analysis."
 	},
 	{
-		"title": "Analyzing Carbon Emissions",
-        "year": "2020",
+		"title": "Optimizing Online Sports Retail Revenue",
+        "year": "2023",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "In today's world, where people care about the environment, this project helps to look at information about carbon emissions. Checked data on carbon emissions, how much energy was used, and renewable energy sources. Used SQL to see how emissions have changed over time, see if policies or efforts are working, and came up with ideas to reduce your carbon footprint."
+		"description": "Maximized revenue for an online sports clothing company and extensively explored product data. Formulated recommendations that will help the company enhance its revenue. The dataset encompasses diverse information distributed across multiple tables, covering aspects such as prices, discounts, revenue, ratings, reviews, product descriptions, and website traffic."
+	},
+	{
+		"title": "Anime Recommender System",
+        "year": "2022",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"description": "Created an anime recommender system with Python that leverages user viewing history, ratings, and preferences to suggest personalized anime recommendations. Using collaborative filtering, content-based filtering, or hybrid approaches, it identifies patterns between users and anime characteristics, ensuring tailored suggestions that match individual tastes and genres for an enhanced viewing experience."
+	},
+	{
+		"title": "Analyzing American baby name trends",
+        "year": "2022",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"description": "What makes a name always liked or just popular for a short time? Looked at information from the U.S. Social Security Administration that goes back over a hundred years. Helped myself understand what names people in America have liked for their babies over time."
 	},
 	{
 		"title": "Blood Bank Management",
@@ -36,39 +48,27 @@
 		"description": "Completed a sentiment analysis project in Python evaluates stock news headlines to assess their impact on market sentiment. By using Natural Language Processing (NLP) techniques, it classifies headlines as positive, negative, or neutral. The project can integrate sentiment scores with stock price data to help predict market movements and assist in data-driven trading decisions."
 	},
 	{
-		"title": "Analyzing American baby name trends",
-        "year": "2022",
+		"title": "Mental Health in the Tech Industry",
+        "year": "2020",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "What makes a name always liked or just popular for a short time? Looked at information from the U.S. Social Security Administration that goes back over a hundred years. Helped myself understand what names people in America have liked for their babies over time."
+		"description": "Studied employee data in the IT business, focusing on their perspectives on mental health. Investigated and analyzed attitudes of mental health, as well as the prevalence of mental health illnesses, particularly in the technology industry."
 	},
 	{
-		"title": "Anime Recommender System",
-        "year": "2022",
+		"title": "Analyzing Carbon Emissions",
+        "year": "2020",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Created an anime recommender system with Python that leverages user viewing history, ratings, and preferences to suggest personalized anime recommendations. Using collaborative filtering, content-based filtering, or hybrid approaches, it identifies patterns between users and anime characteristics, ensuring tailored suggestions that match individual tastes and genres for an enhanced viewing experience."
+		"description": "In today's world, where people care about the environment, this project helps to look at information about carbon emissions. Checked data on carbon emissions, how much energy was used, and renewable energy sources. Used SQL to see how emissions have changed over time, see if policies or efforts are working, and came up with ideas to reduce your carbon footprint."
 	},
 	{
-		"title": "Optimizing Online Sports Retail Revenue",
-        "year": "2023",
+		"title": "Analyzing motorcycle parts sales",
+        "year": "2019",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Maximized revenue for an online sports clothing company and extensively explored product data. Formulated recommendations that will help the company enhance its revenue. The dataset encompasses diverse information distributed across multiple tables, covering aspects such as prices, discounts, revenue, ratings, reviews, product descriptions, and website traffic."
+		"description": "Explored the data of a company that sells motorcycle parts. Gained insights into their wholesale sales over time across three warehouse sites, assisting in understanding the revenue streams better. Determined how much net revenue the company will generate across its product lines each month and at each warehouse."
 	},
 	{
-		"title": "League of Legends First Blood Statistical Analysis",
-        "year": "2024",
+		"title": "Employee payroll management system",
+        "year": "2019",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Investigated the significance of the “first blood” event in League of Legends matches and its impact on match statistics and outcomes with various stages of analysis, starting from exploratory data analysis to hypothesis testing, creation of baseline models, and concluding with fairness analysis."
-	},
-	{
-		"title": "Dating App Matching Algorithm",
-        "year": "2024",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Created a dating app matching algorithm that analyzes user preferences, interests, and behavioral patterns using advanced machine learning. It prioritizes compatibility by factoring in shared values, mutual goals, and personality traits, while leveraging real-time engagement data to suggest high-potential matches. This ensures users receive personalized, meaningful connections, promoting long-term compatibility over surface-level attraction."
-	},
-	{
-		"title": "Analyzing unicorn companies",
-        "year": "2024",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Explored booming industries and investment opportunities using a MySQL database to analyze unicorn companies worth over $1 billion. Identified high-valuation sectors and examined annual new unicorn production from 2019 to 2021. Leveraged the rise of amateur investors and accessible trading platforms to understand global companies' financial performance for informed investment decisions."
+		"description": "Developed a comprehensive Payroll Management System , leveraging the NYC Payroll dataset to facilitate efficient tracking, analysis, and reporting of employee salary and related information."
 	}
 ]
