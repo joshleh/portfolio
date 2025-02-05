@@ -9,28 +9,17 @@ const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 
-// let arc = arcGenerator({
-//   startAngle: 0,
-//   endAngle: 2 * Math.PI,
-// });
+// Lab 5 Step 3.1
+let rolledData = d3.rollups(
+    projects,
+    (v) => v.length,   // Count projects per year
+    (d) => d.year      // Group by the project year
+);
 
-// // Append the path to the SVG
-// d3.select('#projects-plot')
-//   .append('path')
-//   .attr('d', arc)
-//   .attr('fill', 'red');
-
-// Lab 5 Step 1.4
-
-    // Lab 5 Step 1.5 -> 2.1
-let data = [
-    { value: 1, label: 'Apples' },
-    { value: 2, label: 'Oranges' },
-    { value: 3, label: 'Mangos' },
-    { value: 4, label: 'Pears' },
-    { value: 5, label: 'Limes' },
-    { value: 5, label: 'Cherries' }
-];  
+// Convert to an array of objects with `value` and `label`
+let data = rolledData.map(([year, count]) => {
+return { value: count, label: year };
+});  
 
 // Color Scale
 let colors = d3.scaleOrdinal(d3.schemeTableau10); // Lab 5 Step 1.5
@@ -42,14 +31,6 @@ let arcData = sliceGenerator(data);
 // Arc generator for drawing slices
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50); // Lab 5 Step 1.3
 
-
-// arcData.forEach((d, idx) => {
-//     d3.select('#projects-plot')
-//       .append('path')
-//       .attr('d', arcGenerator(d))
-//       .attr('fill', colors(idx));
-// });
-
 // Draw pie chart slices
 d3.select('#projects-plot')
   .selectAll('path')
@@ -59,13 +40,19 @@ d3.select('#projects-plot')
   .attr('d', arcGenerator)
   .attr('fill', (d, idx) => colors(idx));
 
-// Lab 5 Step 2.2 - Generate legend items
+// Lab 5 Step 3.3
 let legend = d3.select('.legend');
+
+// Clear the legend (in case of re-rendering)
+legend.selectAll('*').remove();
+
+// Generate legend items based on dynamic data
 data.forEach((d, idx) => {
-  legend.append('li')
+legend.append('li')
     .attr('style', `--color:${colors(idx)}`)
     .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
 });
+  
 
   
 
