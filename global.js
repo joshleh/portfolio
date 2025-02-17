@@ -22,7 +22,7 @@ let pages = [
     { url: 'resume/index.html', title: 'Resume' },
     { url: 'meta/index.html', title: 'Meta'},
     { url: 'https://github.com/joshleh', title: 'GitHub Profile' },
-    { url: 'https://www.linkedin.com/in/joshleh/', title: 'LinkedIn Profile' },
+    { url: 'https://www.linkedin.com/in/joshleh/', title: 'LinkedIn' },
 ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
